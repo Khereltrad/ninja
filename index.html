@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <!--
+         Crea una clase Ninja
+ agregar un atributo: 
+    nombre
+    salud
+    velocidad - da un valor predeterminado de 3
+    fuerza - dé un valor predeterminado de 3
+ agrega un método: 
+    sayName () - Esto debería registrar el nombre de Ninja en la consola
+    showStats () - Esto debería mostrar el nombre, la fuerza, la velocidad y la salud del Ninja.
+    drinkSake () - Esto debería agregar +10 de salud al Ninja
+    -->
+<script>
+    class Ninja {
+        constructor(nombre,salud,velocidad=3,fuerza=30){
+            this.nombre=nombre;
+            this.salud=salud;
+            this.velocidad=velocidad;
+            this.fuerza=fuerza;
+        }
+        sayName(){
+            console.log(`El nombre del ninja es : ${this.nombre}`) 
+        }
+        showStats(){
+            console.log(`El nivel de salud es :${this.salud}\nLa velocidad que alcanza es :${this.velocidad}\nEl alcance de fuerza que posee es :${this.fuerza}`);
+        }
+        drinkSake(sakes){
+            this.salud=+10*sakes+this.salud;
+        }
+    }
+
+    let ninja1 =new Ninja("Scorpion",400,4,50);
+    let ninja2 =new Ninja("Sub-Zero",450,3,50);
+    let ninja3 =new Ninja("Reptile",350,5);
+    let ninja4 =new Ninja("Ermec",400,);
+</script>
+
+
+</body>
