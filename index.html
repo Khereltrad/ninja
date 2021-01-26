@@ -31,18 +31,31 @@
             console.log(`El nombre del ninja es : ${this.nombre}`) 
         }
         showStats(){
-            console.log(`El nivel de salud es :${this.salud}\nLa velocidad que alcanza es :${this.velocidad}\nEl alcance de fuerza que posee es :${this.fuerza}`);
+            console.log(`El nivel de salud es :${this.salud}\nLa velocidad que alcanza es :${this.velocidad}\nEl alcance de fuerza que posee es :${this.fuerza}\n`);
         }
         drinkSake(sakes){
-            this.salud=+10*sakes+this.salud;
+            this.salud+=10;//*sakes+this.salud;
         }
     }
 
+    class Sensei extends Ninja {
+        constructor(name, salud, speed=3, force=3, wisdom=10){
+        super(name, salud, speed, force)
+        this.wisdom = wisdom;
+        }
+        
+        speakWisdom() {
+            console.log('Mejor revisa a https://proverbia.net/ a ver que te sale');
+            super.drinkSake();
+        }
+    }
     let ninja1 =new Ninja("Scorpion",400,4,50);
     let ninja2 =new Ninja("Sub-Zero",450,3,50);
     let ninja3 =new Ninja("Reptile",350,5);
     let ninja4 =new Ninja("Ermec",400,);
+    let sensei1 =new Sensei("Raiden",400);
+
+
 </script>
-
-
 </body>
+</html>
